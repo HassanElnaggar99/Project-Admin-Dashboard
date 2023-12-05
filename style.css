@@ -4,6 +4,65 @@
   box-sizing: border-box;
 }
 
-body {
+ul {
+  list-style: none;
+}
 
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.header {
+  grid-column: 2 / 3;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 15px;
+}
+
+.sidebar {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  background-color: lightblue;
+  color: white;
+  padding: 20px;
+
+  display: grid;
+  gap: 40px;
+}
+.sidebar .navigation {
+  display: grid;
+  gap: 20px;
+  height: max-content;
+}
+.sidebar .settings {
+  display: grid;
+  gap: 20px;
+  height: max-content;
+}
+
+.main-content {
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.main-content .projects {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+.projects .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.announcements .news-card{
+  padding: 20px;
+}
+.trending .trending-card {
+  padding: 20px;
 }
